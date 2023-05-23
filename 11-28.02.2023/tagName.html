@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Deneme-1</h1>
+    <h1>Deneme-2</h1>
+    <h1>Deneme-3</h1>
+    <p>TEST-1</p>
+    <p>TEST-2</p>
+    <button onclick="Run1()">Run-1</button>
+    <button onclick="Run2()">Run-2</button>
+    <script>
+
+        function Run1(){
+            var x=document.getElementsByTagName("h1");
+            x[1].style.color="red";
+        }
+        function Run2(){
+            var y=document.getElementsByTagName("p");
+            y[0].innerHTML="Tag Name Test";
+        }
+    </script>
+</body>
+</html>

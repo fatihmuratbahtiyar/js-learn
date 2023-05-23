@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .div1{
+            position: absolute;
+            left: 40%;
+            top: 30%;
+            background: rgb(236, 195, 195);
+            padding-left: 10px;
+        }
+        .div2{
+            background: rgb(175, 226, 92);
+        }
+    </style>
+</head>
+<body>
+    <div class="div1" >
+        <h5>Vize</h5>
+        <input id="in1">
+        <h5>Final</h5>
+        <input id="in2">
+        <button onclick="Hesapla()" >HESAPLA</button>
+        <div class="div2">
+            <h3 id="puan" ></h3>
+            <p id="msg"></p>
+        </div>
+    </div>
+    <script>
+        function Hesapla(){
+            var v=parseInt(document.getElementById("in1").value);
+            var f=parseInt(document.getElementById("in2").value);
+            var h=(v*0.4)+(f*0.6);
+            document.getElementById("puan").innerHTML=h;
+            if(h<=20){
+                document.getElementById("msg").innerHTML="Bu hiç olmadı!!!";
+            }
+            if(h<=40){
+                document.getElementById("msg").innerHTML="Kabul et ÇALIŞMADIN!!!";
+            }
+            if(h<=60){
+                document.getElementById("msg").innerHTML="Biraz daha gayret edelim!!!";
+            }
+            if(h<=80){
+                document.getElementById("msg").innerHTML="ha gayret";
+            }
+            if(h<=100){
+                document.getElementById("msg").innerHTML="AFERİN!!!";
+            }
+
+
+
+        }
+
+
+
+
+    </script>
+
+    </div>
+</body>
+</html>

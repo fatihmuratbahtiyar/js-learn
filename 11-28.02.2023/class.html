@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .cc{
+            color:blueviolet
+        }
+        #pid{
+            font-size: 100px;
+        }
+
+    </style>
+</head>
+<body>
+    <p id="pid" class="cc">Merhaba</p>
+    <p  class="cc">Hello</p>
+    <p class="cc">Hello</p>
+    <p class="cc">Hello</p>
+    <button onclick="Run()">Çalıştır</button>
+    <button onclick="Run2()">RUN 2</button>
+    <script>
+        function Run(){
+           var x= document.getElementsByClassName("cc");
+           x[2].innerHTML="DOM class name";
+        }
+        function Run2(){
+            var y=document.getElementsByTagName("p").innerHTML="ID Deneme";
+            y[0].innerHTML="Ta g Name Test";
+        }
+    </script>
+</body>
+</html>

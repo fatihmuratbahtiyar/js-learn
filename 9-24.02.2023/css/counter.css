@@ -1,0 +1,15 @@
+body{
+    background: rgb(99, 15, 78);
+}
+.aa{
+    position: absolute;
+    left: 50%;
+    top: 30%;
+}
+.hh{
+    color: aliceblue;
+    background: black;
+    border: 1px solid red;
+    border-radius: 50%;
+    padding-left: 60px;
+}

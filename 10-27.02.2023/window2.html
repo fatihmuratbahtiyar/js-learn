@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="Ac()">Open</button>
+    <button onclick="Kapat()">Close</button>
+    <script>
+        var x;
+        function Ac(){
+            x=window.open("https://aws.amazon.com/tr","blank","width=500,height=500")
+        }
+        function Kapat(){
+            x.close();
+        }
+    </script>
+</body>
+</html>

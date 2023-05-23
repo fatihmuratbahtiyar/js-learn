@@ -1,0 +1,50 @@
+<!--
+  @description       : 
+  @author            : ChangeMeIn@UserSettingsUnder.SFDoc
+  @group             : 
+  @last modified on  : 02-17-2023
+  @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
+-->
+<template>
+    
+    <lightning-card  variant="Narrow"  title="TODO Component" icon-name="standard:account">
+      
+      <p class="slds-p-horizontal_small">
+        <span onkeypress={keycheck}>
+        <lightning-input type="text" label="Enter Task" value={task} onchange={textChangeHandler}></lightning-input>
+      
+      
+      </span>
+      </p>
+      
+    </lightning-card>
+    <lightning-card  variant="Narrow"  title="TASK LISK" icon-name="standard:account">
+      
+      <template if:true={tasklist}>
+        <template for:each={tasklist} for:item="taskitem">
+          <div key={taskitem.id}> 
+            
+            <template if:true={taskitem.isdelete}>
+            </template>
+            <template if:false={taskitem.isdelete}>
+              <lightning-button-icon icon-name="utility:delete" ></lightning-button-icon>
+            </template>
+            
+             
+             
+             <template if:true={taskitem.isDone}>
+             </template>
+   
+             <template if:false={taskitem.isDone}>
+   
+               <lightning-button-icon icon-name="utility:check" ></lightning-button-icon>
+             </template>
+             
+             
+             <div class="slds-text-heading_medium"> {taskitem.title} </div> 
+             </div>
+        </template>
+      </template>
+      
+    </lightning-card>
+  </template>
